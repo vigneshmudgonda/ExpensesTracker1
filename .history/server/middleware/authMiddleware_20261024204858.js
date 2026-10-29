@@ -1,0 +1,11 @@
+const jwt = require('jsonwebtoken');
+
+const authMiddleware = (req, res, next) => {
+    const token = req.cookies.token;
+
+    try{
+        const decoded = jwt.verify(token, process.env.JWT_Secre)
+    }catch(err){
+        res.status(401).json({message: "Please login to access this resource"});
+    }
+}
