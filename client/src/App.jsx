@@ -80,7 +80,14 @@ function AppRoutes() {
             />
 
           
-
+<Route
+    path="/add-transaction"
+    element={
+        <ProtectedRoute>
+            <AddTransaction />
+        </ProtectedRoute>
+    }
+/>
             <Route
                 path="*"
                 element={<Navigate to="/login" replace />}
