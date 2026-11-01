@@ -6,6 +6,7 @@ const transactionRoutes = require('./routes/transactionRoutes');
 require('./db');
 
 const app = express();
+app.set("trust proxy", 1);
 const port =process.env.PORT || 3000;
 
 
