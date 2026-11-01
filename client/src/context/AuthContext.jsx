@@ -10,7 +10,7 @@ import axios from 'axios';
 const AuthContext = createContext(null);
 
 export const api = axios.create({
-    baseURL: 'https://expensestracker1.onrender.com',
+    baseURL: 'https://expensestracker1.onrender.com/api',
     withCredentials: true
 });
 
